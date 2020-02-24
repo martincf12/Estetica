@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="backgroundAgregarClienteTransparente" stylesheets="@../recursos/stylesAgregarClientes.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Controlador">
+   <children>
+      <ListView opacity="0.0" prefHeight="600.0" prefWidth="200.0" />
+      <Button alignment="BASELINE_LEFT" layoutY="135.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" stylesheets="@../recursos/stylesAgregarClientes.css" text="Semiología Cutanea" textFill="WHITE">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font></Button>
+      <Button alignment="BASELINE_LEFT" layoutY="194.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" stylesheets="@../recursos/stylesAgregarClientes.css" text="Más..." textFill="WHITE" AnchorPane.leftAnchor="0.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font></Button>
+      <Button alignment="BASELINE_LEFT" layoutY="75.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" stylesheets="@../recursos/stylesAgregarClientes.css" text="Antecedentes" textFill="WHITE">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Button>
+      <Button alignment="BASELINE_LEFT" layoutY="15.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" stylesheets="@../recursos/stylesAgregarClientes.css" text="Datos Presonales" textFill="WHITE">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Button>
+      <Pane layoutX="200.0" prefHeight="600.0" prefWidth="650.0">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="650.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+               <children>
+                  <Pane layoutX="650.0" layoutY="140.0" prefHeight="40.0" prefWidth="50.0" styleClass="backgroundAgregarClienteSemiologia" stylesheets="@../recursos/stylesAgregarClientes.css" />
+                  <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semiología Cutanea">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="600.0" prefWidth="650.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+               <children>
+                  <Pane layoutX="650.0" layoutY="200.0" prefHeight="40.0" prefWidth="50.0" styleClass="backgroundAgregarClienteMedidas" stylesheets="@../recursos/stylesAgregarClientes.css" />
+                  <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medidas">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="600.0" prefWidth="650.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+               <children>
+                  <Pane layoutX="650.0" layoutY="260.0" prefHeight="40.0" prefWidth="50.0" styleClass="backgroundAgregarClienteMas" stylesheets="@../recursos/stylesAgregarClientes.css" />
+                  <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Más...">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="600.0" prefWidth="650.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+               <children>
+                  <Pane layoutX="650.0" layoutY="20.0" prefHeight="40.0" prefWidth="50.0" styleClass="backgroundAgregarClienteDatosPersonales" stylesheets="@../recursos/stylesAgregarClientes.css" />
+                  <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos Presonales">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="70.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre y Apellido">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="70.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Domicilio">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="70.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profesión">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="71.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de Nacimiento">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="70.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="70.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="70.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Foto">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="240.0" layoutY="80.0" prefWidth="300.0" promptText="Nombre y Apellido">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="240.0" layoutY="130.0" prefWidth="300.0" promptText="Domicilio">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="240.0" layoutY="180.0" prefWidth="300.0" promptText="Teléfono">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="240.0" layoutY="230.0" prefWidth="300.0" promptText="E-Mail">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="240.0" layoutY="280.0" prefWidth="300.0" promptText="Profesión">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <DatePicker layoutX="240.0" layoutY="340.0" promptText="Seleccione la fecha" />
+               </children>
+            </Pane>
+            <Pane prefHeight="600.0" prefWidth="650.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+               <children>
+                  <Pane layoutX="650.0" layoutY="80.0" prefHeight="40.0" prefWidth="50.0" styleClass="backgroundAgregarClienteAntecedentes" stylesheets="@../recursos/stylesAgregarClientes.css" />
+                  <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antecedentes">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Derivado por ">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diabético">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alérgico">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Partos">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trat. Dietético">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tensión Arterial">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antec. Hormonales">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperamento">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cigarrillo">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nro. de cirugías">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="80.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alcohol">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="240.0" layoutY="80.0" prefWidth="300.0" promptText="Dr/a">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="240.0" layoutY="240.0" prefWidth="300.0" promptText="Tratamientos">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="240.0" layoutY="320.0" prefWidth="300.0" promptText="Antecedentes">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox layoutX="240.0" layoutY="120.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
+                  <ComboBox layoutX="240.0" layoutY="160.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
+                  <ComboBox layoutX="240.0" layoutY="200.0" prefWidth="60.0" promptText="0" visibleRowCount="3" />
+                  <ComboBox layoutX="240.0" layoutY="280.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
+                  <ComboBox layoutX="240.0" layoutY="400.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
+                  <ComboBox layoutX="240.0" layoutY="440.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
+                  <ComboBox layoutX="240.0" layoutY="480.0" prefWidth="60.0" promptText="0" visibleRowCount="3" />
+                  <TextField layoutX="240.0" layoutY="360.0" prefWidth="300.0" promptText="Temperamento">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
