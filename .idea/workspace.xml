@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="ultimos cambios">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="ultimos cambios a agregarclientes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/VeroProject/ventanas/AgregarCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VeroProject/ventanas/AgregarCliente.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ventanas/AgregarCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/AgregarCliente.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583463442456</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ultimos cambios a agregarclientes">
+      <created>1583720049787</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583720049787</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -238,7 +242,8 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="ultimos cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="ultimos cambios" />
+    <MESSAGE value="ultimos cambios a agregarclientes" />
+    <option name="LAST_COMMIT_MESSAGE" value="ultimos cambios a agregarclientes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="450" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582523804312">
@@ -253,26 +258,26 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1582522018773" />
-    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1583463441206">
+    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1583720147297">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1583463441206" />
-    <state width="1316" height="284" key="GridCell.Tab.0.bottom" timestamp="1583712832251">
+    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1583720147297" />
+    <state width="1316" height="284" key="GridCell.Tab.0.bottom" timestamp="1583720106924">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="284" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1583712832251" />
-    <state width="1316" height="284" key="GridCell.Tab.0.center" timestamp="1583712832251">
+    <state width="1316" height="284" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1583720106924" />
+    <state width="1316" height="284" key="GridCell.Tab.0.center" timestamp="1583720106924">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="284" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1583712832251" />
-    <state width="1316" height="284" key="GridCell.Tab.0.left" timestamp="1583712832251">
+    <state width="1316" height="284" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1583720106924" />
+    <state width="1316" height="284" key="GridCell.Tab.0.left" timestamp="1583720106924">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="284" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1583712832251" />
-    <state width="1316" height="284" key="GridCell.Tab.0.right" timestamp="1583712832251">
+    <state width="1316" height="284" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1583720106924" />
+    <state width="1316" height="284" key="GridCell.Tab.0.right" timestamp="1583720106924">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1316" height="284" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1583712832251" />
+    <state width="1316" height="284" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1583720106924" />
     <state width="1316" height="216" key="GridCell.Tab.1.bottom" timestamp="1582540436916">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -301,9 +306,9 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="272" y="84" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1583463354077" />
-    <state x="489" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583463488628">
+    <state x="489" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583720130106">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="489" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1583463488628" />
+    <state x="489" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1583720130106" />
   </component>
 </project>
