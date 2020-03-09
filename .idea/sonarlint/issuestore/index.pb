@@ -13,3 +13,5 @@ I
 src/controlador/Main.java,e\c\ec23316d7069acb77ec7700b16abd1fbda34aac5
 P
  src/ventanas/AgregarCliente.fxml,9\6\96168b087234a339f4cee4fc622639c04fc038c4
+g
+7out/production/VeroProject/ventanas/AgregarCliente.fxml,b\8\b88bb43a9e47e298fe22b892ab2e92c158ee5cb6
