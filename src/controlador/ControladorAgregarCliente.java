@@ -2,7 +2,7 @@ package controlador;
 
 import javafx.scene.layout.Pane;
 
-public class Controlador {
+public class ControladorAgregarCliente {
 
     public Pane hojaDatosPersonales;
     public Pane hojaAntecedentes;
