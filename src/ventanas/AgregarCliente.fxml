@@ -13,8 +13,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="backgroundAgregarClienteTransparente" stylesheets="@../recursos/stylesAgregarClientes.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorAgregarCliente">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="backgroundAgregarClienteTransparente" stylesheets="@../recursos/stylesAgregarClientes.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.ControladorAgregarCliente">
     <ListView opacity="0.0" prefHeight="800.0" prefWidth="200.0" />
+   <Button alignment="BASELINE_LEFT" layoutY="625.0" mnemonicParsing="false" onMouseClicked="#tomarValoresClienteCreado" prefHeight="50.0" prefWidth="200.0" styleClass="buttonListo" stylesheets="@../recursos/stylesAgregarClientes.css" text="LIsto" textFill="WHITE">
+      <padding>
+         <Insets left="20.0" />
+      </padding>
+      <font>
+         <Font name="Segoe UI Semibold" size="14.0" />
+      </font>
+   </Button>
     <Button alignment="BASELINE_LEFT" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#traerAdelanteSemiologia" prefHeight="50.0" prefWidth="200.0" stylesheets="@../recursos/stylesAgregarClientes.css" text="Semiología Cutanea" textFill="WHITE">
         <padding>
           <Insets left="20.0" />
@@ -48,83 +56,540 @@
         </font>
     </Button>
     <Pane layoutX="200.0" prefHeight="800.0" prefWidth="699.0">
-        <Pane fx:id="hojaMedidas" prefHeight="800.0" prefWidth="700.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
-            <TextField layoutX="250.0" layoutY="90.0" prefWidth="350.0" promptText="Ingrese la medida">
-                <font>
-                    <Font name="Segoe UI Light" size="14.0" />
-                </font>
-            </TextField>
-            <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medidas">
-                <font>
-                    <Font name="Segoe UI Light" size="24.0" />
-                </font>
-                e
-            </Text>
-            <Text layoutX="90.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arriba del ombligo">
-                <font>
-                    <Font name="Segoe UI Light" size="16.0" />
-                </font>
-            </Text>
-            <Text layoutX="90.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abajo del ombligo">
-                <font>
-                    <Font name="Segoe UI Light" size="16.0" />
-                </font>
-            </Text>
-            <Text layoutX="90.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brazo derecho">
-                <font>
-                    <Font name="Segoe UI Light" size="16.0" />
-                </font>
-            </Text>
-            <Text layoutX="90.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brazo izquierdo">
-                <font>
-                    <Font name="Segoe UI Light" size="16.0" />
-                </font>
-            </Text>
-            <Text layoutX="90.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadera">
-                <font>
-                    <Font name="Segoe UI Light" size="16.0" />
-                </font>
-            </Text>
-            <Text layoutX="90.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Talla">
-                <font>
-                    <Font name="Segoe UI Light" size="16.0" />
-                </font>
-            </Text>
-            <Text layoutX="90.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso (Kg)">
-                <font>
-                    <Font name="Segoe UI Light" size="16.0" />
-                </font>
-            </Text>
-            <TextField layoutX="250.0" layoutY="130.0" prefWidth="350.0" promptText="Ingrese la medida">
-                <font>
-                    <Font name="Segoe UI Light" size="14.0" />
-                </font>
-            </TextField>
-            <TextField layoutX="250.0" layoutY="170.0" prefWidth="350.0" promptText="Ingrese la medida">
-                <font>
-                    <Font name="Segoe UI Light" size="14.0" />
-                </font>
-            </TextField>
-            <TextField layoutX="250.0" layoutY="210.0" prefWidth="350.0" promptText="Ingrese la medida">
-                <font>
-                    <Font name="Segoe UI Light" size="14.0" />
-                </font>
-            </TextField>
-            <TextField layoutX="250.0" layoutY="250.0" prefWidth="350.0" promptText="Ingrese la medida">
-                <font>
-                    <Font name="Segoe UI Light" size="14.0" />
-                </font>
-            </TextField>
-            <TextField layoutX="250.0" layoutY="290.0" prefWidth="350.0" promptText="Ingrese la talla">
-                <font>
-                    <Font name="Segoe UI Light" size="14.0" />
-                </font>
-            </TextField>
-            <TextField layoutX="250.0" layoutY="330.0" prefWidth="350.0" promptText="Ingrese el peso">
-                <font>
-                    <Font name="Segoe UI Light" size="14.0" />
-                </font>
-            </TextField>
+        <Pane fx:id="hojaSemiologia" prefHeight="800.0" prefWidth="700.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+            <ScrollPane prefHeight="800.0" prefWidth="700.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="680.0" style="-fx-background-color: white;">
+                    <Text layoutX="40.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biotipo cutaneo">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normal">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fluente">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="330.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sensible">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="330.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seco Alípico">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="330.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seco deshidratado">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xerodérmico">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="biotipoCutaneoSecoDeshidratado" layoutX="500.0" layoutY="135.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <ComboBox fx:id="biotipoCutaneoNormal" layoutX="210.0" layoutY="105.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <ComboBox fx:id="biotipoCutaneoFluente" layoutX="210.0" layoutY="135.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <ComboBox fx:id="biotipoCutaneoXerodermico" layoutX="210.0" layoutY="165.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <ComboBox fx:id="biotipoCutaneoSecoAlipico" layoutX="500.0" layoutY="105.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <ComboBox fx:id="biotipoCutaneoSensible" layoutX="500.0" layoutY="165.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="biotipoCutaneoColor" layoutX="140.0" layoutY="215.0" prefWidth="160.0" promptText="Color">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="330.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Textura">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="biotipoCutaneoTextura" layoutX="430.0" layoutY="215.0" prefWidth="100.0" promptText="Selección" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pigmentos">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="biotipoCutaneoPigmento" layoutX="140.0" layoutY="255.0" prefWidth="160.0" promptText="Pigmentos">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="330.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="biotipoCutaneoLocaPigmentoLocalizacion" layoutX="430.0" layoutY="255.0" prefWidth="190.0" promptText="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="330.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="biotipoCutaneoCicatricesLocalizacion" layoutX="430.0" layoutY="295.0" prefWidth="190.0" promptText="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesiones">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="biotipoCutaneoLesiones" layoutX="140.0" layoutY="335.0" prefWidth="160.0" promptText="Lesiones">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cicatrices">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="biotipoCutaneoCicatrices" layoutX="140.0" layoutY="295.0" prefWidth="160.0" promptText="Cicatrices">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="40.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pliegues y arrugas">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="De acuerdo al Biotipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="plieguesArrugasDeAcuerdoAlBT" layoutX="230.0" layoutY="420.0" prefWidth="400.0" promptText="De acuerdo al Biotipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inducidas por el sol">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="plieguesArrugasInducidasPorSol" layoutX="230.0" layoutY="460.0" prefWidth="400.0" promptText="Inducidas por el sol">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="40.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Párpados">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nasogeniano">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="localizacionParpados" layoutX="210.0" layoutY="535.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <ComboBox fx:id="localizacionNasogeniano" layoutX="210.0" layoutY="565.0" prefWidth="75.0" promptText="-" visibleRowCount="3">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </ComboBox>
+                    <Text layoutX="330.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peribucales">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="localizacionPeribucales" layoutX="500.0" layoutY="535.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frente">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="localizacionFrente" layoutX="500.0" layoutY="565.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preauriculares">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="localizacionPreauriculares" layoutX="210.0" layoutY="595.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="40.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuello">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tonicidad">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cuelloTonicidad" layoutX="210.0" layoutY="670.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flacidez">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cuelloFlacidez" layoutX="210.0" layoutY="700.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daño solar">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cuelloDanioSolar" layoutX="500.0" layoutY="670.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="40.0" layoutY="760.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vello">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="795.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cara">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="velloCara" layoutX="210.0" layoutY="775.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mentoniano">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="velloMentoniano" layoutX="210.0" layoutY="805.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="795.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Malar">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="velloMalar" layoutX="500.0" layoutY="775.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bozo">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="velloBozo" layoutX="500.0" layoutY="805.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="855.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Se depila">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="velloSeDepila" layoutX="210.0" layoutY="835.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="855.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hirsutamo">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="velloHirsutamo" layoutX="500.0" layoutY="835.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="885.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hipertricosis">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="velloHipertricosis" layoutX="210.0" layoutY="865.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="40.0" layoutY="925.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuero cabelludo">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="955.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seco">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoSeco" layoutX="210.0" layoutY="935.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="985.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eritema">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoEritema" layoutX="210.0" layoutY="965.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="955.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graso">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoGraso" layoutX="500.0" layoutY="935.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="985.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesiones">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoLesiones" layoutX="500.0" layoutY="965.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="1015.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alopecias">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoAlopecias" layoutX="210.0" layoutY="995.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="1015.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoTipo" layoutX="500.0" layoutY="995.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onicopatias">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoOnicopatias" layoutX="210.0" layoutY="1025.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="1075.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descamación">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="330.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antecedentes">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoAntecedentes" layoutX="500.0" layoutY="1025.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="1075.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uñas">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoUnias" layoutX="500.0" layoutY="1055.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="1105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pitiriasis">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoPitiriasis" layoutX="210.0" layoutY="1085.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="1105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prurito">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoPrurito" layoutX="500.0" layoutY="1085.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <ComboBox fx:id="cueroCabelludoDescamacion" layoutX="210.0" layoutY="1055.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Excoriaciones">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="cueroCabelludoExcoriaciones" layoutX="210.0" layoutY="1115.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="40.0" layoutY="1180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esquema corporal">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="1215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celulitis">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="esquemaCorporalCelulitis" layoutX="210.0" layoutY="1195.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="1215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="esquemaCorporalEstrias" layoutX="210.0" layoutY="1270.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <TextField fx:id="esquemaCorporalTipo" layoutX="430.0" layoutY="1193.0" prefWidth="195.0" promptText="Tipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estrías">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="1250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="esquemaCorporalCelulitisLocalizacion" layoutX="150.0" layoutY="1230.0" prefWidth="180.0" promptText="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="330.0" layoutY="1290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="esquemaCorporalEstriasLocalizacion" layoutX="430.0" layoutY="1269.0" prefWidth="195.0" promptText="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="40.0" layoutY="1335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acné">
+                        <font>
+                            <Font name="Segoe UI Light" size="20.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="50.0" layoutY="1370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneTipo" layoutX="210.0" layoutY="1350.0" prefWidth="420.0" promptText="Ingrese tipo de acné">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T. de Evolución">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneTiempoEvolucion" layoutX="210.0" layoutY="1390.0" prefWidth="420.0" promptText="Ingrese tiempo">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ant. hereditarios">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneAntecedentesHereditarios" layoutX="210.0" layoutY="1430.0" prefWidth="420.0" promptText="Ingrese antecedentes">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesiones Elementales">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneLesionesElementales" layoutX="210.0" layoutY="1470.0" prefWidth="150.0" promptText="Ingrese lesiones">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="370.0" layoutY="1490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneLesionesElementalesLocalizacion" layoutX="465.0" layoutY="1470.0" prefWidth="165.0" promptText="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rosácea tipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneRosaceaTipo" layoutX="210.0" layoutY="1510.0" prefWidth="420.0" promptText="Ingrese tipo">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiempo de evolución">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneRosaceaTipoTiempoEvolucion" layoutX="210.0" layoutY="1546.0" prefWidth="150.0" promptText="Ingrese tiempo">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="370.0" layoutY="1567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneRosaceaTipoLocalizacion" layoutX="465.0" layoutY="1546.0" prefWidth="165.0" promptText="Localización">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ant. hereditarios">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneRosaceaTipoAntHereditarios" layoutX="210.0" layoutY="1584.0" prefWidth="420.0" promptText="Ingrese antecedentes">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1725.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Otras alteraciónes">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneOtrasAlteraciones" layoutX="230.0" layoutY="1705.0" prefWidth="405.0" promptText="Ingrese alteraciónes">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1760.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Involución según la edad">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneInvolucionSegunEdad" layoutX="230.0" layoutY="1742.0" prefWidth="405.0" promptText="Ingrese involución">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1800.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trat. Dermatológicos">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneTratamientosDermatologicos" layoutX="230.0" layoutY="1782.0" prefWidth="405.0" promptText="Ingrese tratamientos">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1840.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trat. Cosméticos">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="acneTratamientosCosmeticos" layoutX="230.0" layoutY="1821.0" prefWidth="405.0" promptText="Ingrese tratamientos">
+                        <font>
+                            <Font name="Segoe UI Light" size="14.0" />
+                        </font>
+                    </TextField>
+                    <Text layoutX="50.0" layoutY="1650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Piel senil">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="acnePielSenil" layoutX="210.0" layoutY="1630.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="330.0" layoutY="1650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Queratosis Actinicas">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="acneQueratosisActinicas" layoutX="500.0" layoutY="1630.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+                    <Text layoutX="50.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elastosis solar">
+                        <font>
+                            <Font name="Segoe UI Light" size="15.0" />
+                        </font>
+                    </Text>
+                    <ComboBox fx:id="acneElatosisSolar" layoutX="210.0" layoutY="1660.0" prefWidth="75.0" promptText="-" visibleRowCount="3" />
+               <Text layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semiología Cutanea">
+                  <font>
+                     <Font name="Segoe UI Light" size="24.0" />
+                  </font>
+               </Text>
+                </AnchorPane>
+            </ScrollPane>
         </Pane>
         <Pane fx:id="hojaAntecedentes" prefHeight="800.0" prefWidth="700.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
             <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antecedentes">
@@ -187,568 +652,111 @@
                     <Font name="Segoe UI Light" size="16.0" />
                 </font>
             </Text>
-            <TextField layoutX="250.0" layoutY="80.0" prefWidth="350.0" promptText="Dr/a">
+            <TextField fx:id="derivadoPor" layoutX="250.0" layoutY="80.0" prefWidth="350.0" promptText="Dr/a">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <TextField layoutX="250.0" layoutY="240.0" prefWidth="350.0" promptText="Tratamientos">
+            <TextField fx:id="tratamientoDietetico" layoutX="250.0" layoutY="240.0" prefWidth="350.0" promptText="Tratamientos">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <TextField layoutX="250.0" layoutY="320.0" prefWidth="350.0" promptText="Antecedentes">
+            <TextField fx:id="antecedentesHormonales" layoutX="250.0" layoutY="320.0" prefWidth="350.0" promptText="Antecedentes">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <ComboBox layoutX="250.0" layoutY="120.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-            <ComboBox layoutX="250.0" layoutY="160.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-            <ComboBox layoutX="250.0" layoutY="200.0" prefWidth="60.0" promptText="0" visibleRowCount="3" />
-            <ComboBox layoutX="250.0" layoutY="280.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-            <ComboBox layoutX="250.0" layoutY="400.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-            <ComboBox layoutX="250.0" layoutY="440.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-            <ComboBox layoutX="250.0" layoutY="480.0" prefWidth="60.0" promptText="0" visibleRowCount="3" />
-            <TextField layoutX="250.0" layoutY="360.0" prefWidth="350.0" promptText="Temperamento">
+            <ComboBox fx:id="alergicoDD" layoutX="250.0" layoutY="120.0" prefWidth="70.0" promptText="-" visibleRowCount="3" />
+            <ComboBox fx:id="diabeticoDD" layoutX="250.0" layoutY="160.0" prefWidth="70.0" promptText="-" visibleRowCount="3" />
+            <ComboBox fx:id="partosDD" layoutX="250.0" layoutY="200.0" prefWidth="70.0" promptText="0" visibleRowCount="3" />
+            <ComboBox fx:id="tensionArterialDD" layoutX="250.0" layoutY="280.0" prefWidth="70.0" promptText="-" visibleRowCount="3" />
+            <ComboBox fx:id="cigarrilloDD" layoutX="250.0" layoutY="400.0" prefWidth="70.0" promptText="-" visibleRowCount="3" />
+            <ComboBox fx:id="alcoholDD" layoutX="250.0" layoutY="440.0" prefWidth="70.0" promptText="-" visibleRowCount="3" />
+            <ComboBox fx:id="numeroDeCirugiasDD" layoutX="250.0" layoutY="480.0" prefWidth="70.0" promptText="0" visibleRowCount="3" />
+            <TextField fx:id="temperamento" layoutX="250.0" layoutY="360.0" prefWidth="350.0" promptText="Temperamento">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
         </Pane>
-        <Pane fx:id="hojaSemiologia" prefHeight="800.0" prefWidth="700.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
-            <ScrollPane prefHeight="800.0" prefWidth="700.0">
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="680.0" style="-fx-background-color: white;">
-                    <Text layoutX="40.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biotipo cutaneo">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Normal">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fluente">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="330.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sensible">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="330.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seco Alípico">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="330.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seco deshidratado">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xerodérmico">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="135.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <ComboBox layoutX="210.0" layoutY="105.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <ComboBox layoutX="210.0" layoutY="135.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <ComboBox layoutX="210.0" layoutY="165.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <ComboBox layoutX="500.0" layoutY="105.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <ComboBox layoutX="500.0" layoutY="165.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="140.0" layoutY="215.0" prefWidth="160.0" promptText="Color">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="330.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Textura">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="430.0" layoutY="215.0" prefWidth="100.0" promptText="Selección" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pigmentos">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="140.0" layoutY="255.0" prefWidth="160.0" promptText="Pigmentos">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="330.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="430.0" layoutY="255.0" prefWidth="190.0" promptText="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="330.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="430.0" layoutY="295.0" prefWidth="190.0" promptText="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesiones">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="140.0" layoutY="335.0" prefWidth="160.0" promptText="Lesiones">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cicatrices">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="140.0" layoutY="295.0" prefWidth="160.0" promptText="Cicatrices">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="40.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pliegues y arrugas">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="De acuerdo al Biotipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="230.0" layoutY="420.0" prefWidth="400.0" promptText="De acuerdo al Biotipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inducidas por el sol">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="230.0" layoutY="460.0" prefWidth="400.0" promptText="Inducidas por el sol">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="40.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Párpados">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nasogeniano">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="535.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <ComboBox layoutX="210.0" layoutY="565.0" prefWidth="60.0" promptText="-" visibleRowCount="3">
-                        <cursor>
-                            <Cursor fx:constant="HAND" />
-                        </cursor>
-                    </ComboBox>
-                    <Text layoutX="330.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peribucales">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="535.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frente">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="565.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preauriculares">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="595.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="40.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuello">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tonicidad">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="670.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flacidez">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="700.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daño solar">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="670.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="40.0" layoutY="760.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vello">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="795.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cara">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="775.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mentoniano">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="805.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="795.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Malar">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="775.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bozo">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="805.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="855.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Se depila">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="835.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="855.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hirsutamo">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="835.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="885.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hipertricosis">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="865.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="40.0" layoutY="925.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuero cabelludo">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="955.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seco">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="935.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="985.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eritema">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="965.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="955.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graso">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="935.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="985.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesiones">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="965.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="1015.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alopecias">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="995.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="1015.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="995.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onicopatias">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="1025.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="1075.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descamación">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="330.0" layoutY="1045.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antecedentes">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="1025.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="1075.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uñas">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="1055.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="1105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pitiriasis">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="1085.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="1105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prurito">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="1085.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <ComboBox layoutX="210.0" layoutY="1055.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="1135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Excoriaciones">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="1115.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="40.0" layoutY="1180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esquema corporal">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="1215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celulitis">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="1195.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="1215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="1270.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <TextField layoutX="430.0" layoutY="1193.0" prefWidth="195.0" promptText="Tipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estrías">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="1250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="150.0" layoutY="1230.0" prefWidth="180.0" promptText="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="330.0" layoutY="1290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="430.0" layoutY="1269.0" prefWidth="195.0" promptText="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="40.0" layoutY="1335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acné">
-                        <font>
-                            <Font name="Segoe UI Light" size="20.0" />
-                        </font>
-                    </Text>
-                    <Text layoutX="50.0" layoutY="1370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="210.0" layoutY="1350.0" prefWidth="420.0" promptText="Ingrese tipo de acné">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T. de Evolución">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="210.0" layoutY="1390.0" prefWidth="420.0" promptText="Ingrese tiempo">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ant. hereditarios">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="210.0" layoutY="1430.0" prefWidth="420.0" promptText="Ingrese antecedentes">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lesiones Elementales">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="210.0" layoutY="1470.0" prefWidth="150.0" promptText="Ingrese lesiones">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="370.0" layoutY="1490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="465.0" layoutY="1470.0" prefWidth="165.0" promptText="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rosácea tipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="210.0" layoutY="1510.0" prefWidth="420.0" promptText="Ingrese tipo">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiempo de evolución">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="210.0" layoutY="1546.0" prefWidth="150.0" promptText="Ingrese tiempo">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="370.0" layoutY="1567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="465.0" layoutY="1546.0" prefWidth="165.0" promptText="Localización">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ant. hereditarios">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="210.0" layoutY="1584.0" prefWidth="420.0" promptText="Ingrese antecedentes">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1725.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Otras alteraciónes">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="230.0" layoutY="1705.0" prefWidth="405.0" promptText="Ingrese alteraciónes">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1760.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Involución según la edad">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="230.0" layoutY="1742.0" prefWidth="405.0" promptText="Ingrese involución">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1800.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trat. Dermatológicos">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="230.0" layoutY="1782.0" prefWidth="405.0" promptText="Ingrese tratamientos">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1840.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trat. Cosméticos">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <TextField layoutX="230.0" layoutY="1821.0" prefWidth="405.0" promptText="Ingrese tratamientos">
-                        <font>
-                            <Font name="Segoe UI Light" size="14.0" />
-                        </font>
-                    </TextField>
-                    <Text layoutX="50.0" layoutY="1650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Piel senil">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="1630.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="330.0" layoutY="1650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Queratosis Actinicas">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="500.0" layoutY="1630.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-                    <Text layoutX="50.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elastosis solar">
-                        <font>
-                            <Font name="Segoe UI Light" size="15.0" />
-                        </font>
-                    </Text>
-                    <ComboBox layoutX="210.0" layoutY="1660.0" prefWidth="60.0" promptText="-" visibleRowCount="3" />
-               <Text layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semiología Cutanea">
-                  <font>
-                     <Font name="Segoe UI Light" size="24.0" />
-                  </font>
-               </Text>
-                </AnchorPane>
-            </ScrollPane>
+        <Pane fx:id="hojaMedidas" prefHeight="800.0" prefWidth="700.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+            <TextField fx:id="arribaDelOmbligo" layoutX="250.0" layoutY="90.0" prefWidth="350.0" promptText="Ingrese la medida">
+                <font>
+                    <Font name="Segoe UI Light" size="14.0" />
+                </font>
+            </TextField>
+            <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medidas">
+                <font>
+                    <Font name="Segoe UI Light" size="24.0" />
+                </font>
+                e
+            </Text>
+            <Text layoutX="90.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arriba del ombligo">
+                <font>
+                    <Font name="Segoe UI Light" size="16.0" />
+                </font>
+            </Text>
+            <Text layoutX="90.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abajo del ombligo">
+                <font>
+                    <Font name="Segoe UI Light" size="16.0" />
+                </font>
+            </Text>
+            <Text layoutX="90.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brazo derecho">
+                <font>
+                    <Font name="Segoe UI Light" size="16.0" />
+                </font>
+            </Text>
+            <Text layoutX="90.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brazo izquierdo">
+                <font>
+                    <Font name="Segoe UI Light" size="16.0" />
+                </font>
+            </Text>
+            <Text layoutX="90.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadera">
+                <font>
+                    <Font name="Segoe UI Light" size="16.0" />
+                </font>
+            </Text>
+            <Text layoutX="90.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Talla (cm)">
+                <font>
+                    <Font name="Segoe UI Light" size="16.0" />
+                </font>
+            </Text>
+            <Text layoutX="90.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso (Kg)">
+                <font>
+                    <Font name="Segoe UI Light" size="16.0" />
+                </font>
+            </Text>
+            <TextField fx:id="abajoDelOmbligo" layoutX="250.0" layoutY="130.0" prefWidth="350.0" promptText="Ingrese la medida">
+                <font>
+                    <Font name="Segoe UI Light" size="14.0" />
+                </font>
+            </TextField>
+            <TextField fx:id="brazoDerecho" layoutX="250.0" layoutY="170.0" prefWidth="350.0" promptText="Ingrese la medida">
+                <font>
+                    <Font name="Segoe UI Light" size="14.0" />
+                </font>
+            </TextField>
+            <TextField fx:id="brazoIzquierdo" layoutX="250.0" layoutY="210.0" prefWidth="350.0" promptText="Ingrese la medida">
+                <font>
+                    <Font name="Segoe UI Light" size="14.0" />
+                </font>
+            </TextField>
+            <TextField fx:id="cadera" layoutX="250.0" layoutY="250.0" prefWidth="350.0" promptText="Ingrese la medida">
+                <font>
+                    <Font name="Segoe UI Light" size="14.0" />
+                </font>
+            </TextField>
+            <TextField fx:id="talla" layoutX="250.0" layoutY="290.0" prefWidth="350.0" promptText="Ingrese la talla">
+                <font>
+                    <Font name="Segoe UI Light" size="14.0" />
+                </font>
+            </TextField>
+            <TextField fx:id="peso" layoutX="250.0" layoutY="330.0" prefWidth="350.0" promptText="Ingrese el peso">
+                <font>
+                    <Font name="Segoe UI Light" size="14.0" />
+                </font>
+            </TextField>
         </Pane>
         <Pane fx:id="hojaDatosPersonales" prefHeight="800.0" prefWidth="699.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
             <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos Presonales">
@@ -786,32 +794,32 @@
                     <Font name="Segoe UI Light" size="16.0" />
                 </font>
             </Text>
-            <TextField layoutX="250.0" layoutY="90.0" prefWidth="350.0" promptText="Nombre y Apellido">
+            <TextField fx:id="nombreApellido" layoutX="250.0" layoutY="90.0" prefWidth="350.0" promptText="Nombre y Apellido">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <TextField layoutX="250.0" layoutY="140.0" prefWidth="350.0" promptText="Domicilio">
+            <TextField fx:id="domicilio" layoutX="250.0" layoutY="140.0" prefWidth="350.0" promptText="Domicilio">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <TextField layoutX="250.0" layoutY="190.0" prefWidth="350.0" promptText="Teléfono">
+            <TextField fx:id="telefono" layoutX="250.0" layoutY="190.0" prefWidth="350.0" promptText="Teléfono">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <TextField layoutX="250.0" layoutY="240.0" prefWidth="350.0" promptText="E-Mail">
+            <TextField fx:id="email" layoutX="250.0" layoutY="240.0" prefWidth="350.0" promptText="E-Mail">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <TextField layoutX="250.0" layoutY="290.0" prefWidth="350.0" promptText="Profesión">
+            <TextField fx:id="profesion" layoutX="250.0" layoutY="290.0" prefWidth="350.0" promptText="Profesión">
                 <font>
                     <Font name="Segoe UI Light" size="14.0" />
                 </font>
             </TextField>
-            <DatePicker editable="false" layoutX="250.0" layoutY="340.0" promptText="Seleccione la fecha" />
+            <DatePicker fx:id="fechaNacimiento" editable="false" layoutX="250.0" layoutY="340.0" promptText="Seleccione la fecha" />
             <Button layoutX="70.0" layoutY="390.0" mnemonicParsing="false" text="Agregar foto...">
                 <font>
                     <Font name="Segoe UI Semibold" size="16.0" />
@@ -819,4 +827,12 @@
             </Button>
         </Pane>
     </Pane>
+   <Button alignment="BASELINE_LEFT" layoutY="560.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" styleClass="buttonListo" stylesheets="@../recursos/stylesAgregarClientes.css" text="Atrás" textFill="WHITE">
+      <padding>
+         <Insets left="20.0" />
+      </padding>
+      <font>
+         <Font name="Segoe UI Semibold" size="14.0" />
+      </font>
+   </Button>
 </AnchorPane>

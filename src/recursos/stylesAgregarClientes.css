@@ -8,6 +8,16 @@
     -fx-background-color:  #cfa2d5;
 }
 
+.buttonListo{
+     -fx-text-fill: white;
+     -fx-background-color: #cfa2d5;
+}
+
+.buttonListo:hover{
+    -fx-text-fill: #cfa2d5;
+    -fx-background-color:  white;
+}
+
 .backgroundAgregarClienteDatosPersonales{
     -fx-background-color: #FF4465;
 }
