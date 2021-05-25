@@ -2,16 +2,21 @@ package controladores;
 
 import clasesUtiles.Cliente;
 import clasesUtiles.InicializadorDD;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class ControladorAgregarCliente {
+public class ControladorAgregarCliente implements Initializable {
 
     @FXML Pane hojaDatosPersonales;
     @FXML Pane hojaAntecedentes;
@@ -190,5 +195,21 @@ public class ControladorAgregarCliente {
         nuevoCliente.setProfesion(profesion.getText());
 //      nuevoCliente.setFechaNacimiento(fechaNacimiento.????????);
         return nuevoCliente;
+    }
+
+    private Stage stagePrincipal;
+
+    public void setStagePrincipal(Stage stagePrincipal) {
+        this.stagePrincipal = stagePrincipal;
+    }
+
+    @FXML
+    private void salirVentana(ActionEvent event) {
+        stagePrincipal.close();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }
 }
