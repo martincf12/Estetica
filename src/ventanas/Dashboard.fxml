@@ -11,9 +11,9 @@
    <children>
       <Pane prefHeight="580.0" prefWidth="1100.0" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
          <children>
-            <Pane prefHeight="580.0" prefWidth="275.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+            <Pane prefHeight="580.0" prefWidth="220.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
                <children>
-                  <Button layoutY="430.0" lineSpacing="6.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="275.0" text="Clientes" textAlignment="CENTER">
+                  <Button layoutY="430.0" lineSpacing="6.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="220.0" text="Clientes" textAlignment="CENTER">
                      <font>
                         <Font name="Segoe UI Semibold" size="18.0" />
                      </font>
@@ -23,9 +23,9 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="275.0" prefHeight="580.0" prefWidth="275.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+            <Pane layoutX="220.0" prefHeight="580.0" prefWidth="220.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
                <children>
-                  <Button layoutY="430.0" mnemonicParsing="false" onAction="#nuevaVentana" prefHeight="150.0" prefWidth="275.0" text="Agregar Cliente" textAlignment="CENTER">
+                  <Button layoutY="430.0" mnemonicParsing="false" onAction="#nuevaVentana" prefHeight="150.0" prefWidth="220.0" text="Agregar Cliente" textAlignment="CENTER">
                      <font>
                         <Font name="Segoe UI Semibold" size="18.0" />
                      </font>
@@ -35,9 +35,9 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="550.0" prefHeight="580.0" prefWidth="275.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+            <Pane layoutX="660.0" prefHeight="580.0" prefWidth="220.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
                <children>
-                  <Button layoutY="430.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="275.0" text="Cumpleaños" textAlignment="CENTER" wrapText="true">
+                  <Button layoutY="430.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="220.0" text="Cumpleaños" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Segoe UI Semibold" size="18.0" />
                      </font>
@@ -47,15 +47,27 @@
                   </Button>
                </children>
             </Pane>
-            <Pane layoutX="825.0" prefHeight="580.0" prefWidth="275.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+            <Pane layoutX="880.0" prefHeight="580.0" prefWidth="220.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
                <children>
-                  <Button layoutY="430.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="275.0" text="Pagos" textAlignment="CENTER">
+                  <Button layoutY="430.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="220.0" text="Pagos" textAlignment="CENTER">
                      <font>
                         <Font name="Segoe UI Semibold" size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="440.0" prefHeight="580.0" prefWidth="220.0" style="-fx-background-color: white;" styleClass="backgroundAgregarClienteDefecto" stylesheets="@../recursos/stylesAgregarClientes.css">
+               <children>
+                  <Button layoutY="430.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="220.0" text="Tratamientos" textAlignment="CENTER" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Segoe UI Semibold" size="18.0" />
+                     </font>
                   </Button>
                </children>
             </Pane>

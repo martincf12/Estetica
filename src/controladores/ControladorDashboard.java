@@ -7,7 +7,7 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ControladorDashboard implements Initializable {
+public class ControladorDashboard{
 
     private ProgramaVero prueba = new ProgramaVero();
 
@@ -20,8 +20,7 @@ public class ControladorDashboard implements Initializable {
         this.prueba = prueba;
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize() {
         // TODO
     }
 }

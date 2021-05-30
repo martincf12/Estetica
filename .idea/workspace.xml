@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="ultimos cambios a agregarclientes">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/VeroProject.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="cambio ventanas, agregado menu principal">
       <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controladores/ControladorDashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controladores/ProgramaVero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/VeroProject/clasesCliente/Client.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/VeroProject/controlador/Controlador.class" beforeDir="false" />
@@ -22,12 +18,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/VeroProject/recursos/stylesAgregarClientes.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VeroProject/recursos/stylesAgregarClientes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/VeroProject/ventanas/AgregarCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/VeroProject/ventanas/AgregarCliente.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/VeroProject/ventanas/Principal.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/ControladorAgregarCliente.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controladores/ControladorAgregarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/ControladorAgregarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controladores/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/recursos/stylesAgregarClientes.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/recursos/stylesAgregarClientes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controladores/ControladorDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/ControladorDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controladores/ProgramaVero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controladores/ProgramaVero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ventanas/AgregarCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/AgregarCliente.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ventanas/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ventanas/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ventanas/Principal.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +150,7 @@
       <recent name="C:\Users\MartinDev\Desktop\INFO\TAE\automation-test-informatorio-2019\VeroProject\src\Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.ProjectVero.jar">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -283,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583720168880</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cambio ventanas, agregado menu principal">
+      <created>1621957791657</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1621957791657</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -309,18 +311,10 @@
     </ignored-roots>
     <MESSAGE value="ultimos cambios" />
     <MESSAGE value="ultimos cambios a agregarclientes" />
-    <option name="LAST_COMMIT_MESSAGE" value="ultimos cambios a agregarclientes" />
+    <MESSAGE value="cambio ventanas, agregado menu principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio ventanas, agregado menu principal" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controladores/ControladorDashboard.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="controladores.ProgramaVero" memberName="primaryStage" />

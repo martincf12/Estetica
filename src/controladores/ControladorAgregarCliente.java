@@ -32,6 +32,7 @@ public class ControladorAgregarCliente implements Initializable {
 
     @FXML TextField derivadoPor;
     @FXML ComboBox alergicoDD;
+    @FXML TextField alergicoDescripcion;
     @FXML ComboBox diabeticoDD;
     @FXML ComboBox partosDD;
     @FXML TextField tratamientoDietetico;
@@ -41,6 +42,8 @@ public class ControladorAgregarCliente implements Initializable {
     @FXML ComboBox cigarrilloDD;
     @FXML ComboBox alcoholDD;
     @FXML ComboBox numeroDeCirugiasDD;
+    @FXML ComboBox tuvoCovidDD;
+    @FXML ComboBox vacunadoCovidDD;
 
     @FXML ComboBox biotipoCutaneoNormal;
     @FXML ComboBox biotipoCutaneoSecoAlipico;
@@ -126,6 +129,8 @@ public class ControladorAgregarCliente implements Initializable {
         listOfElementsSiNo.add(cigarrilloDD);
         listOfElementsSiNo.add(alcoholDD);
         listOfElementsNumeros.add(numeroDeCirugiasDD);
+        listOfElementsSiNo.add(tuvoCovidDD);
+        listOfElementsSiNo.add(vacunadoCovidDD);
         listOfElementsSiNo.add(biotipoCutaneoNormal);
         listOfElementsSiNo.add(biotipoCutaneoSecoAlipico);
         listOfElementsSiNo.add(biotipoCutaneoFluente);
@@ -173,17 +178,10 @@ public class ControladorAgregarCliente implements Initializable {
     public void traerAdelanteSemiologia(){hojaSemiologia.toFront();}
     public void traerAdelanteMedidas(){hojaMedidas.toFront();}
 
-    public void initialize(){
-        cargarListaComboBox();
-        listOfElementsSiNo.forEach((element) -> {
-            element.getItems().clear();
-            element.setItems(InicializadorDD.inicializarDDSiNo());
-        });
-        listOfElementsNumeros.forEach((element) -> {
-            element.getItems().clear();
-            element.setItems(InicializadorDD.inicializarDDNumeros());
-        });
-
+    @FXML
+    public void ventanaAtras() throws Exception {
+        ProgramaVero prueba = new ProgramaVero();
+        prueba.mostrarVentanaPrincipal();
     }
 
     public Cliente tomarValoresClienteCreado() {
@@ -210,6 +208,14 @@ public class ControladorAgregarCliente implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        cargarListaComboBox();
+        listOfElementsSiNo.forEach((element) -> {
+            element.getItems().clear();
+            element.setItems(InicializadorDD.inicializarDDSiNo());
+        });
+        listOfElementsNumeros.forEach((element) -> {
+            element.getItems().clear();
+            element.setItems(InicializadorDD.inicializarDDNumeros());
+        });
     }
 }
